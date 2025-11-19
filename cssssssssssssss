@@ -1,0 +1,77 @@
+/* ----------- ESTILOS BASE (MÓVILES < 576px) ----------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* evita desbordes */
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;   /* 1 columna por defecto */
+    gap: 20px;
+    background-color: rgb(252, 188, 69);     /* fondo móviles */     /* bordes móviles */
+    padding: 20px;
+}
+
+.gallo, .corzo, .oso {
+    border: 2px solid blue;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+
+/* ----------- ≥ 576px — TELÉFONOS GRANDES ----------- */
+/* (ya estaba correcto, no requiere cambios) */
+
+
+/* ----------- ≥ 768px — TABLETAS (2 columnas) ----------- */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        background-color: rgb(118, 118, 253);
+        border-color: green;
+    }
+
+    .gallo, .corzo, .oso {
+        border-color: green;
+    }
+}
+
+
+/* ----------- ≥ 992px — PORTÁTILES (3 columnas) ----------- */
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgb(58, 128, 58);
+        border-color: red;
+    }
+
+    .gallo, .corzo, .oso {
+        border-color: red;
+    }
+}
+
+
+/* ----------- ≥ 1200px — GRANDES DISPOSITIVOS (4 columnas) ----------- */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        background-color: #444;
+        border-color: black;
+    }
+
+    .gallo, .corzo, .oso {
+        border-color: black;
+        color: white;
+    }
+}
